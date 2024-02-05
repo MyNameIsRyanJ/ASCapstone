@@ -1,15 +1,21 @@
-body {
+html {
+    padding: 0;
     margin: 0;
+    height: 100%;
+    overflow: hidden;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    background-image: url('images/pattern.svg');
-    background-repeat: repeat;
 }
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
 #nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1px;
     background-color: #DAD6D5;
     color: #662d22; 
 }
@@ -22,7 +28,7 @@ body {
 
 /* styling for logo images in nav */
 .logo-img {
-    height: 100px;
+    height: 75px;
     width: auto;
     margin-right: 10px;
 }
@@ -36,42 +42,37 @@ body {
 }
 
 .content {
+    height: 100%;
     display: flex;
     align-items: center;
-    margin: 50px 0;
+    justify-content: space-between;
 }
 
 /* styling for each individual content block */
 .content div {
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
     text-align: center;
-    margin: 0 130px;
     position: relative;
     cursor: pointer;
+    height: 100%;
+    width: 100%;
 }
 
 /*font size for game names */
 .content h3 {
-    font-size: 3em; 
+    font-size: 2em; 
     margin-bottom: 3px; 
     color: #662d22;
 }
 
+.content h3:first-child {
+    margin-top: 1em;
+}
+
 .content img {
-    max-width: 100%;
-    height: auto;
+    height: 450px;
     margin-bottom: 10px;
-}
-
-#music-clash img {
-    height: 150px;
-}
-
-#guess-the-lyric img {
-    height: 150px;
-}
-
-#album-matching img {
-    height: 150px;
 }
 
 h3 {
@@ -87,3 +88,142 @@ h3 {
     color: #662d22;
 }
 
+.genre-selector {
+    background: #DAD6D5;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.genre-selector:nth-child(even) {
+    color: #226662;
+}
+
+.genre-selector:nth-child(odd) {
+    color: #662D22;
+}
+
+#genre-content {
+    display: flex;
+    padding-top: 24px;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+}
+
+.genre-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.genre-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#genre-selector-last {
+    background: #DAD6D5;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 48px;
+    padding-right: 48px;
+    color: #662D22;
+}
+
+#genre-title {
+    font-size: 28px;
+    color: #662D22;
+}
+
+#guess-content {
+    display: flex;
+    padding-top: 96px;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #DFE6E0;
+}
+
+#guess-album-img {
+    height: 200px;
+    width: 200px;
+    background-color: #226662;
+    display: flex;
+    align-self: center;
+}
+
+#lyrics {
+    color:#662D22;
+    font-size: 36px;
+    align-self: center;
+    margin: 12px;
+}
+
+#guess-inp {
+    width: 200px;
+    height: 25px;
+    align-self: center;
+    text-align: center;
+}
+
+#guess-submit-btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 12px;
+    font-size: 18px;
+    align-self: center;
+    color: #662D22;
+    background-color: #DAD6D5;
+    border: 0;
+}
+
+.home-click {
+    cursor: pointer;
+}
+
+.account-click {
+    cursor: pointer;
+}
+
+.content #clash-link:hover {
+    background-color: #B3EAE2;
+}
+
+.content #guess-link:hover {
+    background-color: #B0E3B7;
+}
+
+.content #matching-link:hover {
+    background-color: #E2AFA5;
+}
+
+.content #clash-history-link:hover {
+    background-color: #B3EAE2;
+}
+
+.content #guess-history-link:hover {
+    background-color: #B0E3B7;
+}
+
+.content #matching-history-link:hover {
+    background-color: #E2AFA5;
+}
