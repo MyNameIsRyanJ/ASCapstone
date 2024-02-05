@@ -24,6 +24,7 @@ body {
 .logo-img {
     height: 100px;
     width: auto;
+    margin-right: 10px;
 }
 
 .text-color-primary {
@@ -43,13 +44,16 @@ body {
 /* styling for each individual content block */
 .content div {
     text-align: center;
-    margin: 0 70px;
+    margin: 0 130px;
     position: relative;
     cursor: pointer;
 }
 
-#guess-the-lyric {
-    margin-right: 50px;
+/*font size for game names */
+.content h3 {
+    font-size: 3em; 
+    margin-bottom: 3px; 
+    color: #662d22;
 }
 
 .content img {
