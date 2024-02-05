@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: 'Sriracha', Arial, sans-serif;
+    background-color: #f5f5f5;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #DAD6D5;
+    color: #662d22; 
+}
+
+.nav-item {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* styling for logo images in nav */
+.logo-img {
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.text-color-primary {
+    color: #662d22;
+}
+
+.text-color-secondary {
+    color: #226662;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+}
+
+/* styling for each individual content block */
+.content div {
+    text-align: center;
+    margin: 0 130px;
+    position: relative;
+    cursor: pointer;
+}
+
+/*font size for game names */
+.content h3 {
+    font-size: 3em; 
+    margin-bottom: 3px; 
+    color: #662d22;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#music-clash img {
+    height: 150px;
+}
+
+#guess-the-lyric img {
+    height: 150px;
+}
+
+#album-matching img {
+    height: 150px;
+}
