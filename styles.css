@@ -19,6 +19,7 @@ body {
     align-items: center;
 }
 
+/* styling for logo images in nav */
 .logo-img {
     height: 100px;
     width: auto;
@@ -38,10 +39,12 @@ body {
     margin: 50px 0;
 }
 
+/* styling for each individual content block */
 .content div {
     text-align: center;
     margin: 0 70px;
     position: relative;
+    cursor: pointer;
 }
 
 #guess-the-lyric {
@@ -69,11 +72,13 @@ body {
 h3 {
     font-size: 1.5rem;
     margin: 0;
-    opacity: 0; /* hide the text */
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
 
+/* hover effect */
 .content div:hover h3 {
-    opacity: 1; /* show text on hover */
+    opacity: 1;
+    color: #662d22;
 }
 
