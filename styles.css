@@ -2,8 +2,9 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
 }
-
 #nav {
     display: flex;
     justify-content: space-between;
