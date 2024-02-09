@@ -52,6 +52,9 @@ body {
 .content div {
     background-image: url('images/pattern.svg');
     background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     position: relative;
     cursor: pointer;
@@ -66,8 +69,8 @@ body {
     color: #662d22;
 }
 
-.content h3:first-child {
-    margin-top: 1em;
+.content h3:last-child {
+    margin-bottom: 4rem;
 }
 
 .content img {
