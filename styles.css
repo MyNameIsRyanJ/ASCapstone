@@ -319,3 +319,26 @@ h3 {
     right: 800px;
     width: 100px;
 }
+
+.versus-container {
+    width: auto;
+    overflow:
+}
+
+.versus-img {
+    width: 400px;
+    float: right;
+    padding-right: 600px;
+    margin-top: 350px;
+}
+
+.versus-img:last-child {
+    float: left;
+    margin-right: 0;
+    padding-left: 500px;
+}
+
+.versus {
+    padding-left: 600px;
+    margin-left: 650px;
+}
