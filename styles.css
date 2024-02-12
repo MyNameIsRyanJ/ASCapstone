@@ -256,9 +256,66 @@ h3 {
     flex-direction: column;
 }
 
-.clash-row {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding-right: 1500px;
+.clash-1 {
+    position: absolute;
+    padding-top: 970px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-2 {
+    position: absolute;
+    padding-top: 700px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-3 {
+    position: absolute;
+    padding-top: 520px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-4 {
+    position: absolute;
+    padding-top: 250px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-5 {
+    position: absolute;
+    padding-top: 520px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-6 {
+    position: absolute;
+    padding-top: 250px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-7 {
+    position: absolute;
+    padding-top: 700px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-8 {
+    position: absolute;
+    padding-top: 970px;
+    top: 0;
+    right: 800px;
+    width: 100px;
 }
