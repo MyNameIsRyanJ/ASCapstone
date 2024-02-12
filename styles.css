@@ -207,6 +207,18 @@ h3 {
     cursor: pointer;
 }
 
+.content #clash-link {
+    background-color: #DFE6E5;
+}
+
+.content #guess-link {
+    background-color: #DFE6E0;
+}
+
+.content #matching-link {
+    background-color: #E6E1E0;
+}
+
 .content #clash-link:hover {
     background-color: #B3EAE2;
 }
@@ -229,4 +241,67 @@ h3 {
 
 .content #matching-history-link:hover {
     background-color: #E2AFA5;
+}
+
+#matching-content {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #E6E1E0;
+}
+
+#album-matching {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 65%;
+}
+
+#album-matching-stage-1-options {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 30%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.album-matching-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+}
+
+.album-matching-img-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.album-matching-img {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    border: 2px solid black;
+}
+
+.album-matching-guesses {
+    width: 50%;
+    height: 82%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.matching-title-area {
+    background: white;
+    width: 95%;
+    height: 50px;
+    border: 2px solid black;
+    align-self: center;
 }
