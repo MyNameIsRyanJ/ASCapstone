@@ -342,3 +342,19 @@ h3 {
     padding-left: 600px;
     margin-left: 650px;
 }
+
+.versus-1 {
+    position: absolute;
+    padding-top: 1000px;
+    top: 0;
+    right: 700px;
+    width: 100px;
+}
+
+.versus-2 {
+    position: absolute;
+    padding-top: 1000px;
+    top: 0;
+    right: 1700px;
+    width: 100px;
+}
