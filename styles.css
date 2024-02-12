@@ -322,7 +322,7 @@ h3 {
 
 .versus-container {
     width: auto;
-    overflow:
+    overflow: hidden;
 }
 
 .versus-img {
