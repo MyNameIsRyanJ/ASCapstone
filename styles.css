@@ -307,3 +307,131 @@ h3 {
     border: 2px solid black;
     align-self: center;
 }
+
+.bracket-img {
+    padding-top: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    
+
+}
+
+#clash-content {
+    display: flex;
+    padding-top: 96px;
+    flex-direction: column;
+    height: 100%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #dfe6e6;
+}
+
+.clash-col {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clash-1 {
+    position: absolute;
+    padding-top: 970px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-2 {
+    position: absolute;
+    padding-top: 700px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-3 {
+    position: absolute;
+    padding-top: 520px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-4 {
+    position: absolute;
+    padding-top: 250px;
+    top: 0;
+    right: 1600px;
+    width: 100px;
+}
+
+.clash-5 {
+    position: absolute;
+    padding-top: 520px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-6 {
+    position: absolute;
+    padding-top: 250px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-7 {
+    position: absolute;
+    padding-top: 700px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.clash-8 {
+    position: absolute;
+    padding-top: 970px;
+    top: 0;
+    right: 800px;
+    width: 100px;
+}
+
+.versus-container {
+    width: auto;
+    overflow: hidden;
+}
+
+.versus-img {
+    width: 400px;
+    float: right;
+    padding-right: 600px;
+    margin-top: 350px;
+}
+
+.versus-img:last-child {
+    float: left;
+    margin-right: 0;
+    padding-left: 500px;
+}
+
+.versus {
+    padding-left: 600px;
+    margin-left: 650px;
+}
+
+.versus-1 {
+    position: absolute;
+    padding-top: 1000px;
+    top: 0;
+    right: 700px;
+    width: 100px;
+}
+
+.versus-2 {
+    position: absolute;
+    padding-top: 1000px;
+    top: 0;
+    right: 1700px;
+    width: 100px;
+}
