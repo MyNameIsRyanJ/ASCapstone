@@ -1,3 +1,24 @@
+<?php
+
+session_start();
+
+if (!(isset($_SESSION["username"])))
+{
+    if (isset($_GET['code']))
+    {
+        include "getAuthObj.php";
+        include "profile.php";
+        $_SESSION["username"] = $prof_obj["display_name"];
+        $_SESSION["userImg"] = $prof_obj["images"][0]["url"];
+        $_SESSION["accessToken"] = $authObj["access_token"];
+    }
+    else
+    {
+        include "auth.php";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +34,8 @@
             <h1><strong class="text-color-primary">Music</strong> <strong class="text-color-secondary">Madness</strong></h1>
         </div>
         <div class="nav-item account-click">
-            <h2 id="username">Guest</h2>
-            <img src="images/account.svg" alt="logo" class="logo-img">
+            <h2 id="username"><?=$_SESSION["username"];?></h2>
+            <img src="<?=$_SESSION["userImg"];?>" alt="logo" class="logo-img">
         </div>
     </div>
     

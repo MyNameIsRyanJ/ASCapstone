@@ -102,6 +102,7 @@ h3 {
     padding-bottom: 12px;
     padding-left: 48px;
     padding-right: 48px;
+    cursor: pointer;
 }
 
 .genre-selector:nth-child(even) {
@@ -146,6 +147,7 @@ h3 {
     padding-left: 48px;
     padding-right: 48px;
     color: #662D22;
+    cursor: pointer;
 }
 
 #genre-title {
