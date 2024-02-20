@@ -13,7 +13,7 @@
     }
 
     $state = generateRandomString(16);
-    $scope = 'user-read-private user-read-email';
+    $scope = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing streaming';
 
     header('Location: https://accounts.spotify.com/authorize?' . http_build_query([
         'response_type' => 'code',
