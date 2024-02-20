@@ -1,6 +1,6 @@
 <?php
 
-$ini = parse_ini_file(__DIR__ . 'models/dbconfig.ini');
+$ini = parse_ini_file(__DIR__ . '/dbconfig.ini');
 
 $db = new PDO(
     "mysql:host=" . $ini['servername'] . 
@@ -11,20 +11,6 @@ $db = new PDO(
 );
 
 $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-
-
-function addUser($account_name, $account_spotify_id) {
-    global $db;
-    $stmt = $db->prepare("INSERT INTO accounts (account_name, account_spotify_id, date_of_creation) VALUES (?, ?, NOW())");
-    return $stmt->execute([$account_name, $account_spotify_id]);
-}
-
-function userLogin($spotify_id) {
-    global $db;
-    $stmt = $db->prepare("SELECT * FROM accounts WHERE account_spotify_id = ?");
-    $stmt->execute([$spotify_id]);
-    return $stmt->fetch(PDO::FETCH_ASSOC); 
-}
 
 function addMusicClashHistory($account_id, $songs_list, $round_winners_list, $round_losers_list) {
     global $db;
