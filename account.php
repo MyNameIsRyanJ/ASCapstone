@@ -9,7 +9,7 @@ include_once 'models/db.php';
 
 $user_spotify_id = $_SESSION["spotify_id"];
 
-$music_clash_games = count(searchUserPlayedMusicClashGames($user_spotify_id));
+$music_clash_games = count(searchUserPlayedMusicClashGames($user_spotify_id)); /*history */
 $album_matching_games = count(searchUserPlayedAlbumMatching($user_spotify_id));
 $guess_the_lyric_games = count(searchUserPlayedGuessTheLyric($user_spotify_id));
 
