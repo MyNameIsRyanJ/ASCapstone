@@ -20,7 +20,7 @@ function addMusicClashHistory($account_id, $songs_list, $round_winners_list, $ro
         
 function addAlbumMatchingHistory($account_id, $albums_list, $album_guess_correct, $song_list, $guess_correct_list, $score) {
     global $db;
-    $stmt = $db->prepare("INSERT INTO albummatchinghistory (account_id, albums_list, album_guess_correct, song_list, guess_correct_list, score) VALUES (?, ?, ?, ?, ?, ?)"); 
+    $stmt = $db->prepare("INSERT INTO albummatchinghistory (account_id, albums_list, album_guess_correct, song_list, guess_correct_list, score) VALUES (?, ?, ?, ?, ?, ?)"); /*place holder */
     return $stmt->execute([$account_id, $albums_list, $album_guess_correct, $song_list, $guess_correct_list, $score]);
 }
 
