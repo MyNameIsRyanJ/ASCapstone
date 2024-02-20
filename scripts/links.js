@@ -39,19 +39,23 @@ if (matchingClick != null)
 const queryString = window.location.search;
 if (queryString == "?clash")
 {
+    document.querySelector(`#genre-content`).style.backgroundColor = `#DFE6E5`;
     document.querySelector(`#logo-text`).innerHTML = `<strong class="text-color-primary">Music</strong> <strong class="text-color-secondary">Clash</strong>`;
 }
 else if (queryString == "?guess")
 {
+    document.querySelector(`#genre-content`).style.backgroundColor = `#DFE6E0`;
     document.querySelector(`#logo-text`).innerHTML = `<strong class="text-color-primary">Guess</strong> <strong class="text-color-secondary">The Lyric</strong>`;
 }
 else if (queryString == "?matching")
 {
+    document.querySelector(`#genre-content`).style.backgroundColor = `#E6E1E0`;
     document.querySelector(`#logo-text`).innerHTML = `<strong class="text-color-primary">Album</strong> <strong class="text-color-secondary">Matching</strong>`;
 }
 
-if (genreSelectors != null)
+if (genreSelectors[0] != null)
 {
+    console.log(genreSelectors[0]);
     for (let selector = 0; selector < genreSelectors.length; selector++)
     {
         genreSelectors[selector].addEventListener(`click`, (e) => {

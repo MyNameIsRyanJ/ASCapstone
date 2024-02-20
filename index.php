@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if (!(isset($_SESSION["username"])))
@@ -62,7 +61,11 @@ if (!(isset($_SESSION["username"])))
     </div>
     <script src="scripts/links.js"></script>
     <script>
- 
+        const connectToken = `<?=$_SESSION["accessToken"]?>`;
     </script>
+    <?php if (isset($_SESSION["username"])) : ?>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="scripts/spotifyplayer.js"></script>
+    <?php endif; ?>
 </body>
 </html>

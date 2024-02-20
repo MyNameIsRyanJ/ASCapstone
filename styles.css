@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 html {
     padding: 0;
     margin: 0;
     height: 100%;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    font-family: "Patrick Hand", cursive;
 }
 
 body {
@@ -245,6 +247,18 @@ h3 {
     background-color: #E2AFA5;
 }
 
+.content #clash-history-link {
+    background-color: #DFE6E5;
+}
+
+.content #guess-history-link {
+    background-color: #DFE6E0;
+}
+
+.content #matching-history-link {
+    background-color: #E6E1E0;
+}
+
 #matching-content {
     display: flex;
     justify-content: space-around;
@@ -317,14 +331,63 @@ h3 {
 }
 
 #clash-content {
-    display: flex;
-    padding-top: 96px;
-    flex-direction: column;
-    height: 100%;
+    display: grid;
+    height: 90%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 0;
     background-image: url('images/pattern.svg');
     background-repeat: repeat;
     background-size: 33.3%;
     background-color: #dfe6e6;
+}
+
+.clash-square {
+    height: 100%;
+    width: 100%;
+}
+
+.clash-left-top {
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+}
+.clash-left-bottom {
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.clash-right-top {
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+}
+.clash-right-bottom {
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.clash-connector-top {
+    border-bottom: 4px solid black;
+}
+.clash-connector-bottom {
+    border-top: 4px solid black;
+}
+
+.clash-finals-left-top {
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+}
+
+.clash-finals-left {
+    border-left: 4px solid black;
+}
+
+.clash-finals-right-bottom {
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.clash-finals-right {
+    border-right: 4px solid black;
 }
 
 .clash-col {
