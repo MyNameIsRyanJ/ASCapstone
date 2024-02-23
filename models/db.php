@@ -53,7 +53,7 @@ function SearchUserPlayedMusicClashGames () {
     return $results;
 }
 
-funtion SearchUserPlayedAlbumMatching () {
+function SearchUserPlayedAlbumMatching () {
     global $db
     $results = [];
     $stmt = $db->prepare("SELECT account_id FROM albummatchinghistory")
