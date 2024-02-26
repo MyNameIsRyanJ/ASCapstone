@@ -203,6 +203,19 @@ h3 {
     border: 0;
 }
 
+#clash-submit-btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 12px;
+    font-size: 18px;
+    align-self: center;
+    color: #662D22;
+    background-color: #DAD6D5;
+    border: 0;
+}
+
 .home-click {
     cursor: pointer;
 }
