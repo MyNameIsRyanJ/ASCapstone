@@ -50,15 +50,6 @@ function searchUserPlayedMusicClashGames($account_id) {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function SearchUserPlayedAlbumMatching () {
-    global $db
-    $results = [];
-    $stmt = $db->prepare("SELECT account_id FROM albummatchinghistory")
-    if ($stmt->execute() && $stmt->rowCount() > 0) {
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-    return $results;
-}
 function searchUserPlayedAlbumMatching($account_id) {
     global $db;
     $stmt = $db->prepare("SELECT * FROM albummatchinghistory WHERE account_id = ?");
