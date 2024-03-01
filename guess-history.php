@@ -29,11 +29,13 @@ $guessHistory = searchUserPlayedGuessTheLyric($user_spotify_id);
             <img src="<?=$_SESSION["userImg"];?>" alt="logo" class="logo-img">
         </div>
     </div>
+    <div id="clash-content">
     <style>
         table {
             border-collapse: collapse;
-            width: 50%;
+            width: 100%;
             margin: 20px auto;
+            margin-left: 24em;
         }
         th, td {
             border: 1px solid #dddddd;
@@ -65,6 +67,7 @@ $guessHistory = searchUserPlayedGuessTheLyric($user_spotify_id);
             </tr>
         <?php endforeach; ?>
     </table>
+    </div>
     <script src="scripts/links.js"></script>
 </div>
 </body>

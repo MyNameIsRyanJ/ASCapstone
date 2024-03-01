@@ -29,15 +29,17 @@ $matching_history = searchUserPlayedAlbumMatching($user_spotify_id);
             <img src="<?=$_SESSION["userImg"];?>" alt="logo" class="logo-img">
         </div>
     </div>
+    <div id="clash-content">
     <style>
         table {
             border-collapse: collapse;
-            width: 50%;
+            width: 100%;
             margin: 20px auto;
+            margin-left: 22em;
         }
         th, td {
             border: 1px solid #dddddd;
-            text-align: left;
+            text-align: middle;
             padding: 8px;
         }
         th {
@@ -65,6 +67,7 @@ $matching_history = searchUserPlayedAlbumMatching($user_spotify_id);
             </tr>
         <?php endforeach; ?>
     </table>   
+    </div>
     <script src="scripts/links.js"></script>
 </body>
 </html>
