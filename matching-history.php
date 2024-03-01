@@ -47,21 +47,21 @@ $matching_history = searchUserPlayedAlbumMatching($user_spotify_id);
     <body>
     <table>
         <tr>
+            <th>Date Played</th>
             <th>Albums List</th>
             <th>Albums Guessed Correct</th>
             <th>Songs List</th>
             <th>Songs Guessed Correct</th>
             <th>Score</th>
-            <th>Date Played</th>
         </tr>
         <?php foreach ($matching_history as $record): ?>
             <tr>
+                <td><?= $record['date_played']?></td>
                 <td><?= $record['albums_list']?></td>
                 <td><?= $record['album_guess_correct']?></td>
                 <td><?= $record['songs_list']?></td>
                 <td><?= $record['guess_correct_list']?></td>
                 <td><?= $record['score']?></td>
-                <td><?= $record['date_played']?></td>
             </tr>
         <?php endforeach; ?>
     </table>   
