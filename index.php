@@ -10,6 +10,7 @@ if (!(isset($_SESSION["username"])))
         $_SESSION["username"] = $prof_obj["display_name"];
         $_SESSION["userImg"] = $prof_obj["images"][0]["url"];
         $_SESSION["accessToken"] = $authObj["access_token"];
+        $_SESSION["spotify_id"] = $prof_obj["id"];
     }
     else
     {

@@ -39,8 +39,8 @@ function addAlbumMatchingHistory($account_id, $albums_list, $album_guess_correct
 
 function addGuessTheLyricHistory($account_id, $song, $lyric, $dropped_word_index, $guess, $score) {
     global $db;
-    $stmt = $db->prepare("INSERT INTO guessthelyrichistory (account_id, song, lyric, dropped_word_index, guess, score) VALUES (?, ?, ?, ?, ?, ?)");
-    return $stmt->execute([$account_id, $song, $lyric, $dropped_word_index, $guess, $score]);
+    $stmt = $db->prepare("INSERT INTO guessthelyrichistory (account_id, song, lyric, dropped_word, guess, score, date_played) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    return $stmt->execute([$account_id, $song, $lyric, $dropped_word, $guess, $score, $date_played]);
 }
 
 function searchUserPlayedMusicClashGames($account_id) {

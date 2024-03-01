@@ -56,12 +56,12 @@ $guessHistory = searchUserPlayedGuessTheLyric($user_spotify_id);
         </tr>
         <?php foreach ($guessHistory as $record): ?>
             <tr>
-                <td><?= $record['date_played'] ?></td>
                 <td><?= $record['song'] ?></td>
                 <td><?= $record['lyric'] ?></td>
-                <td><?= $record['dropped_word_index'] ?></td>
+                <td><?= $record['dropped_word'] ?></td>
                 <td><?= $record['guess'] ?></td>
                 <td><?= $record['score'] ?></td>
+                <td><?= $record['date_played'] ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
