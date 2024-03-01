@@ -10,10 +10,34 @@ if (!(isset($_SESSION["username"])))
         $_SESSION["username"] = $prof_obj["display_name"];
         $_SESSION["userImg"] = $prof_obj["images"][0]["url"];
         $_SESSION["accessToken"] = $authObj["access_token"];
+        $_SESSION["spotify_id"] = $prof_obj["id"];
+        if (!(isset($_SESSION["user_id"])))
+        {
+            include "models/db.php";
+            $loginData = userLogin($_SESSION["spotify_id"]);
+            if (0 == count($loginData))
+            {
+                addUser($_SESSION["username"], $_SESSION["spotify_id"]);
+                $loginData = userLogin($_SESSION["spotify_id"]);
+            }
+            $_SESSION["user_id"] = $loginData[0]["account_id"];
+        }
     }
     else
     {
         include "auth.php";
+    }
+}
+
+if (isset($_GET['error']))
+{
+    if ($_GET['error'] == 'Toomanyrequests')
+    {
+        echo '<script>alert("Too Many API Requests")</script>'; 
+    }
+    if ($_GET['error'] == 'cannotrecieve')
+    {
+        echo '<script>alert("Failed To Get Data Try Again.")</script>'; 
     }
 }
 ?>
@@ -60,10 +84,10 @@ if (!(isset($_SESSION["username"])))
         </div>
     </div>
     <script src="scripts/links.js"></script>
+    <?php if (isset($_SESSION["username"])) : ?>
     <script>
         const connectToken = `<?=$_SESSION["accessToken"]?>`;
     </script>
-    <?php if (isset($_SESSION["username"])) : ?>
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
     <script src="scripts/spotifyplayer.js"></script>
     <?php endif; ?>

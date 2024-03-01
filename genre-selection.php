@@ -6,6 +6,8 @@ if (!(isset($_SESSION["username"])))
     header('Location: index.php');
 }
 
+include "models/db.php";
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://api.spotify.com/v1/recommendations/available-genre-seeds');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -14,19 +16,68 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Authorization: Bearer ' . $_SESSION["accessToken"]
 ]);
 
+$needDB = False;
+
 $response = curl_exec($ch);
+if ($response == "Too many requests")
+{
+    $needDB = True;
+}
 if (curl_errno($ch)) {
-    echo 'Error:' . curl_error($ch);
+    $needDB = True;
 }
 curl_close($ch);
-
-$genresObj = json_decode($response, true);
-$startInd = rand(0, count($genresObj["genres"])-8);
+$genresList = [];
+if (!$needDB)
+{
+    $genresObj = json_decode($response, true);
+    if (array_key_exists("error", $genresObj))
+    {
+        $needDB = True;
+    }
+}
+if ($needDB)
+{
+    $genreDBList = getGenres();
+    $genresList = [];
+    for ($i = 0; $i < count($genreDBList); $i++)
+    {
+        array_push($genresList, $genreDBList[$i]["genre"]);
+    }
+}
+else
+{
+    $not_include_array = ["acoustic", "ambient", "anime", "bossanova", "brazil", "breakbeat", "cantopop", "chicago-house",  "classical", "comedy", "detroit-techno", "dub", "dubstep", "edm", "electro", "electronic", "french", "german", "gospel", "guitar", "idm", "indian", "iranian", "j-dance", "j-idol", "j-pop", "j-rock", "k-pop", "latin", "latino", "malay", "mandopop", "minimal-techno", "mpb", "opera", "pagode", "philippines-opm", "piano", "post-dubstep", "rainy-day", "reggae", "reggaeton", "salsa", "samba", "sertanejo", "show-tunes", "ska", "sleep", "soundtracks", "spanish", "study", "swedish", "tango", "trance", "trip-hop", "turkish", "work-out", "world-music"];
+    $genresObj = json_decode($response, true);
+    for ($i = 0; $i < count($genresObj["genres"]); $i++)
+    {
+        if (!(in_array($genresObj["genres"][$i], $not_include_array)))
+        {
+            if (0 == count(searchGenresForExisting($genresObj["genres"][$i])))
+            {
+                addGenreData($genresObj["genres"][$i]);
+            }
+            array_push($genresList, $genresObj["genres"][$i]);
+        }
+    }
+}
+$startInd = rand(0, count($genresList)-8);
 $genresArray = [];
+$index = $startInd;
+while (count($genresArray) < 8)
+{
+    array_push($genresArray, $genresList[$index]);
+    $index++;
+    if ($index > count($genresList))
+    {
+        $index=0;
+    }
+}
+/*
 for ($i = $startInd; $i < $startInd+8; $i++)
 {
     array_push($genresArray, $genresObj["genres"][$i]);
-}
+}*/
 ?>
 
 <!DOCTYPE html>

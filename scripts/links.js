@@ -61,15 +61,15 @@ if (genreSelectors[0] != null)
         genreSelectors[selector].addEventListener(`click`, (e) => {
             if (queryString == "?clash")
             {
-                window.location.href = `clash.php?${e.target.innerHTML}`
+                window.location.href = `clash.php?genre=${e.target.innerHTML}`
             }
             else if (queryString == "?guess")
             {
-                window.location.href = `guess.php?${e.target.innerHTML}`
+                window.location.href = `guess.php?genre=${e.target.innerHTML}`
             }
             else if (queryString == "?matching")
             {
-                window.location.href = `matching.php?${e.target.innerHTML}`
+                window.location.href = `matching.php?genre=${e.target.innerHTML}`
             }
         });
     }
@@ -78,15 +78,15 @@ if (genreSelectors[0] != null)
         let selection = genreSelectors[randomSelection].innerHTML;
         if (queryString == "?clash")
         {
-            window.location.href = `clash.php?${selection}`
+            window.location.href = `clash.php?genre=${selection}`
         }
         else if (queryString == "?guess")
         {
-            window.location.href = `guess.php?${selection}`
+            window.location.href = `guess.php?genre=${selection}`
         }
         else if (queryString == "?matching")
         {
-            window.location.href = `matching.php?${selection}`
+            window.location.href = `matching.php?genre=${selection}`
         }
     });
 }

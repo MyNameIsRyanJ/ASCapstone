@@ -107,6 +107,10 @@ h3 {
     cursor: pointer;
 }
 
+.genre-selector:hover {
+    background: #9a9a9a;
+}
+
 .genre-selector:nth-child(even) {
     color: #226662;
 }
@@ -150,6 +154,10 @@ h3 {
     padding-right: 48px;
     color: #662D22;
     cursor: pointer;
+}
+
+#genre-selector-last:hover {
+    background: #9a9a9a;
 }
 
 #genre-title {
@@ -201,6 +209,12 @@ h3 {
     color: #662D22;
     background-color: #DAD6D5;
     border: 0;
+    cursor: pointer;
+}
+
+#guess-submit-btn:hover {
+    color: #226662;
+    background-color: #949494;
 }
 
 .home-click {
@@ -497,4 +511,11 @@ h3 {
     top: 0;
     right: 1700px;
     width: 100px;
+}
+
+#guess-content form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
