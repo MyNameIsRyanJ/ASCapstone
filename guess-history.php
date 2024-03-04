@@ -6,8 +6,8 @@ if (!(isset($_SESSION["username"]))) {
 
 include_once 'models/db.php';
 
-$user_spotify_id = $_SESSION["spotify_id"];
-$guessHistory = searchUserPlayedGuessTheLyric($user_spotify_id);
+$user_id = $_SESSION["user_id"];
+$guessHistory = searchUserPlayedGuessTheLyric($user_id);
 ?>
 
 <!DOCTYPE html>

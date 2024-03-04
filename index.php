@@ -37,7 +37,8 @@ if (isset($_GET['error']))
     }
     if ($_GET['error'] == 'cannotrecieve')
     {
-        echo '<script>alert("Failed To Get Data Try Again.")</script>'; 
+        echo '<script>alert("Failed To Get Data Try Again.")</script>';
+        header('Location: destroy.php');
     }
 }
 ?>

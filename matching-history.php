@@ -6,8 +6,8 @@ if (!(isset($_SESSION["username"]))) {
 
 include_once 'models/db.php';
 
-$user_spotify_id = $_SESSION["spotify_id"];
-$matching_history = searchUserPlayedAlbumMatching($user_spotify_id);
+$user_id = $_SESSION["user_id"];
+$matching_history = searchUserPlayedAlbumMatching($user_id);
 ?>
 
 <!DOCTYPE html>
