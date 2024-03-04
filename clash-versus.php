@@ -19,20 +19,19 @@
     </div>
     <div id="clash-content">
         <div id="versus-container">
-        <img src="images/versus.svg" alt="versus" class="versus-img">
-        <img src="images/versus.svg" alt="versus" class="versus-img">
-        <div class="versus">
-            <div>vs</div>
-        </div>
-        <div class="versus-1">
-            <div>Artist</div>
-        </div>
-        <div class="versus-2">
-            <div>Artist</div>
+            <div class="versus-1">
+                <div>Artist 1</div>
+            </div>
+            <img src="images/versus.svg" alt="versus" class="versus-img">
+            <div class="versus">
+                <div>vs</div>
+            </div>
+            <img src="images/versus.svg" alt="versus" class="versus-img">
+            <div class="versus-2">
+                <div>Artist 2</div>
+            </div>
         </div>
     </div>
-    </div>
-        
     <script src="scripts/links.js"></script>
 </body>
-</html> 
+</html>

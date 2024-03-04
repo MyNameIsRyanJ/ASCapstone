@@ -91,9 +91,6 @@
         <div class="clash-square"></div>
         <div class="clash-square"></div>
     </div>
-    <div id="clash-content">
-    <button type="submit" name="submit" id="clash-submit-btn">Submit</button>
-</div>
     <script src="scripts/links.js"></script>
 </body>
 </html> 

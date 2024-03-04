@@ -473,46 +473,27 @@ h3 {
     width: 100px;
 }
 
-.versus-container {
-    width: auto;
-    overflow: hidden;
-}
 
+
+#versus-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10em; 
+    margin-left: 25em;
+}
 .versus-img {
-    width: 400px;
-    float: right;
-    padding-right: 600px;
-    margin-top: 350px;
+    width: 30em;
+    height: auto; 
 }
 
-.versus-img:last-child {
-    float: left;
-    margin-right: 0;
-    padding-left: 500px;
-}
 
 .versus {
-    padding-left: 600px;
-    margin-left: 650px;
+    font-size: 100px; 
+    font-weight: bold;
 }
 
-.versus-1 {
-    position: absolute;
-    padding-top: 1000px;
-    top: 0;
-    right: 700px;
-    width: 100px;
-}
-
+.versus-1,
 .versus-2 {
-    position: absolute;
-    padding-top: 1000px;
-    top: 0;
-    right: 1700px;
-    width: 100px;
-}
-
-
-#artist-1 {
-    padding-left: 100px;
+    text-align: center;
 }
