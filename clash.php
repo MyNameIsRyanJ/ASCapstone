@@ -18,6 +18,14 @@
         </div>
     </div>
     <div id="clash-content">
+        <div class="artist1">artist</div>
+        <div class="artist2">artist</div>
+        <div class="artist3">artist</div>
+        <div class="artist4">artist</div>
+        <div class="artist5">artist</div>
+        <div class="artist6">artist</div>
+        <div class="artist7">artist</div>
+        <div class="artist8">artist</div>
         <!-- first row -->
         <div class="clash-square"></div>
         <div class="clash-square"></div>
