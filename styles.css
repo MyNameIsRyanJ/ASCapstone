@@ -210,6 +210,7 @@ h3 {
     background-color: #DAD6D5;
     border: 0;
     cursor: pointer;
+    border-radius: 12px;
 }
 
 #guess-submit-btn:hover {
@@ -293,7 +294,7 @@ h3 {
 #album-matching-stage-1-options {
     display: flex;
     flex-direction: column;
-    height: 85%;
+    height: 75%;
     width: 30%;
     background-color: white;
     border: 2px solid black;
@@ -518,4 +519,60 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#matching-content form
+{
+    bottom: 2rem;
+    left: 50%;
+    position: absolute;
+}
+
+#matching-content form button
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 12px;
+    font-size: 24px;
+    align-self: center;
+    color: #662D22;
+    background-color: #a3a3a3;
+    border: 0;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#matching-content form button:hover {
+    color: #226662;
+    background-color: #7c7c7c;
+}
+
+#clash-history-content {
+    display: flex;
+    height: 90%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #dfe6e6;
+    justify-content: center;
+}
+#clash-history-table {
+    border-collapse: collapse;
+    width: 75%;
+    height:max-content;
+}
+#clash-history-table-header {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#clash-history-table-body {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#clash-history-table-header {
+    background-color: #f2f2f2;
 }

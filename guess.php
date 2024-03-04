@@ -100,7 +100,7 @@ else
     }
     if ($failed)
     {
-        header('Location: index.php?error=cannotrecieve');   
+        header('Location: index.php?error=cannotrecieve');
     }
     else
     {
