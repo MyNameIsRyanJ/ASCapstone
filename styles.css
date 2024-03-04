@@ -218,6 +218,19 @@ h3 {
     background-color: #949494;
 }
 
+#clash-submit-btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 12px;
+    font-size: 18px;
+    align-self: center;
+    color: #662D22;
+    background-color: #DAD6D5;
+    border: 0;
+}
+
 .home-click {
     cursor: pointer;
 }
@@ -475,37 +488,27 @@ h3 {
     width: 100px;
 }
 
-.versus-container {
-    width: auto;
-    overflow: hidden;
-}
 
+
+#versus-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20em; 
+    margin-left: 45em;
+}
 .versus-img {
-    width: 400px;
-    float: right;
-    padding-right: 600px;
-    margin-top: 350px;
+    width: 30em;
+    height: auto; 
 }
 
-.versus-img:last-child {
-    float: left;
-    margin-right: 0;
-    padding-left: 500px;
-}
 
 .versus {
-    padding-left: 600px;
-    margin-left: 650px;
+    font-size: 100px; 
+    font-weight: bold;
 }
 
-.versus-1 {
-    position: absolute;
-    padding-top: 1000px;
-    top: 0;
-    right: 700px;
-    width: 100px;
-}
-
+.versus-1,
 .versus-2 {
     position: absolute;
     padding-top: 1000px;

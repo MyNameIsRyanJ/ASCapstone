@@ -41,26 +41,29 @@ $total_score_guess_the_lyric = getUserScoreGuessTheLyric($user_spotify_id);
     <div class="content">
         <!-- music clash section -->
         <div id="clash-history-link">
-            <h3>Music Clash</h3>
-            <img src="images/trophy.svg" alt="Music Clash logo">
-            <h3>Matches Played: 0</h3>
+            <a href="clash-history.php">
+                <h3>Music Clash</h3>
+                <img src="images/trophy.svg" alt="Music Clash logo">
+                <h3>Matches Played: <?=$music_clash_games;?></h3>
+            </a>
         </div>
         <!-- guess the lyric section -->
         <div id="guess-history-link">
-            <h3>Guess The Lyric</h3>
-            <img src="images/note.svg" alt="Guess The Lyric logo">
-            <h3>Total Score: 0</h3>
+            <a href="guess-history.php">
+                <h3>Guess The Lyric</h3>
+                <img src="images/note.svg" alt="Guess The Lyric logo">
+                <h3>Total Score: <?=$total_score_guess_the_lyric;?></h3>
+            </a>
         </div>
         <!-- album matching section -->
         <div id="matching-history-link">
-            <h3>Album Matching</h3>
-            <img src="images/card.svg" alt="Album Matching logo">
-            <h3>Total Score: 0</h3>
+            <a href="matching-history.php">
+                <h3>Album Matching</h3>
+                <img src="images/card.svg" alt="Album Matching logo">
+                <h3>Total Score: <?=$total_score_album_matching;?></h3>
+            </a>
         </div>
     </div>
     <script src="scripts/links.js"></script>
-    <script>
-        // Your JavaScript code here
-    </script>
 </body>
 </html>
