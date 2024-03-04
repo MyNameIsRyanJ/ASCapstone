@@ -11,9 +11,10 @@ function recommendationsToAlbums ($genre, $accessToken)
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
         'Authorization: Bearer ' . $accessToken
     ]);
-
+    
     $needDB = False;
     $response = curl_exec($ch);
+    var_dump($response);
     if ($response == "Too many requests")
     {
         $needDB = True;
@@ -48,6 +49,7 @@ function recommendationsToAlbums ($genre, $accessToken)
         return $albums;
     }
 }
+
 
 function getArtistAndSongNames($track_id, $accessToken) {
     $url = 'https://api.spotify.com/v1/tracks/' . $track_id;
@@ -84,6 +86,7 @@ function getArtistAndSongNames($track_id, $accessToken) {
     }
     else
     {
+        var_dump($track_id);
         $track_info = json_decode($response, true);
         $artist_name = $track_info["artists"][0]["name"];
         $song_name = $track_info["name"];
