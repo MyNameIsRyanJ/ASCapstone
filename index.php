@@ -65,12 +65,6 @@ if (isset($_GET['error']))
     
     <!-- main content section -->
     <div class="content">
-        <!-- music clash section -->
-        <div id="clash-link">
-            <h3></h3>
-            <img src="images/trophy.svg" alt="Music Clash logo">
-            <h3>Music Clash</h3>
-        </div>
         <!-- guess the lyric section -->
         <div id="guess-link">
             <h3></h3>

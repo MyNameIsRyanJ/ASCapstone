@@ -579,3 +579,44 @@ h3 {
 #clash-history-table-header {
     background-color: #f2f2f2;
 }
+
+#album-history-content {
+    display: flex;
+    height: 90%;
+    background-image: url('images/pattern.svg');
+    background-repeat: repeat;
+    background-size: 33.3%;
+    background-color: #dfe6e6;
+    justify-content: center;
+}
+#album-history-table {
+    border-collapse: collapse;
+    width: 75%;
+    height:max-content;
+}
+#album-history-table-header {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#album-history-table-body {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#album-history-table-header {
+    background-color: #f2f2f2;
+}
+
+a:link { 
+    text-decoration: none; 
+} 
+a:visited { 
+    text-decoration: none; 
+} 
+a:hover { 
+    text-decoration: none; 
+} 
+a:active { 
+    text-decoration: none; 
+}

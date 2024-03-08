@@ -29,40 +29,40 @@ $matching_history = searchUserPlayedAlbumMatching($user_id);
             <img src="<?=$_SESSION["userImg"];?>" alt="logo" class="logo-img">
         </div>
     </div>
-    <div id="clash-content">
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px auto;
-            margin-left: 22em;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: middle;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        </style>
     <body>
-    <table>
-        <tr>
+    <div id="album-history-content">
+    <table id="album-history-table">
+        <tr id="album-history-table-header">
             <th>Date Played</th>
-            <th>Albums List</th>
-            <th>Albums Guessed Correct</th>
-            <th>Songs List</th>
-            <th>Songs Guessed Correct</th>
+            <th>Albums 1</th>
+            <th>Albums 2</th>
+            <th>Song 1</th>
+            <th>Song 2</th>
+            <th>Song 3</th>
+            <th>Song 4</th>
+            <th>Song 5</th>
+            <th>Song 6</th>
+            <th>Song 7</th>
+            <th>Song 8</th>
+            <th>Song 9</th>
+            <th>Song 10</th>
             <th>Score</th>
         </tr>
         <?php foreach ($matching_history as $record): ?>
-            <tr>
-                <td><?= $record['date_played']?></td>
-                <td><?= $record['albums_list']?></td>
-                <td><?= $record['album_guess_correct']?></td>
-                <td><?= $record['songs_list']?></td>
-                <td><?= $record['guess_correct_list']?></td>
+            <tr id="album-history-table-body">
+                <td><?= $record['date_of_play']?></td>
+                <td style="color:<?php if($record['album_guess_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['album_0']?></td>
+                <td style="color:<?php if($record['album_guess_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['album_1']?></td>
+                <td style="color:<?php if($record['song_0_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_0']?></td>
+                <td style="color:<?php if($record['song_1_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_1']?></td>
+                <td style="color:<?php if($record['song_2_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_2']?></td>
+                <td style="color:<?php if($record['song_3_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_3']?></td>
+                <td style="color:<?php if($record['song_4_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_4']?></td>
+                <td style="color:<?php if($record['song_5_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_5']?></td>
+                <td style="color:<?php if($record['song_6_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_6']?></td>
+                <td style="color:<?php if($record['song_7_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_7']?></td>
+                <td style="color:<?php if($record['song_8_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_8']?></td>
+                <td style="color:<?php if($record['song_9_correct'] == 0) {echo "#ff0000";} else {echo "#0000ff";}?>;"><?= $record['song_9']?></td>
                 <td><?= $record['score']?></td>
             </tr>
         <?php endforeach; ?>

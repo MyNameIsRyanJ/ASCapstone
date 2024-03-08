@@ -7,14 +7,14 @@ if (!(isset($_SESSION["username"])))
 
 include_once 'models/db.php';
 
-$user_spotify_id = $_SESSION["spotify_id"];
+$user_id = $_SESSION["user_id"];
 
-$music_clash_games = count(searchUserPlayedMusicClashGames($user_spotify_id)); /*history */
-$album_matching_games = count(searchUserPlayedAlbumMatching($user_spotify_id));
-$guess_the_lyric_games = count(searchUserPlayedGuessTheLyric($user_spotify_id));
+$music_clash_games = count(searchUserPlayedMusicClashGames($user_id)); /*history */
+$album_matching_games = count(searchUserPlayedAlbumMatching($user_id));
+$guess_the_lyric_games = count(searchUserPlayedGuessTheLyric($user_id));
 
-$total_score_album_matching = getUserScoreAlbumMatching($user_spotify_id);
-$total_score_guess_the_lyric = getUserScoreGuessTheLyric($user_spotify_id);
+$total_score_album_matching = getUserScoreAlbumMatching($user_id);
+$total_score_guess_the_lyric = getUserScoreGuessTheLyric($user_id);
 
 ?>
 <!DOCTYPE html>
@@ -39,14 +39,6 @@ $total_score_guess_the_lyric = getUserScoreGuessTheLyric($user_spotify_id);
     
     <!-- main content section -->
     <div class="content">
-        <!-- music clash section -->
-        <div id="clash-history-link">
-            <a href="clash-history.php">
-                <h3>Music Clash</h3>
-                <img src="images/trophy.svg" alt="Music Clash logo">
-                <h3>Matches Played: <?=$music_clash_games;?></h3>
-            </a>
-        </div>
         <!-- guess the lyric section -->
         <div id="guess-history-link">
             <a href="guess-history.php">
