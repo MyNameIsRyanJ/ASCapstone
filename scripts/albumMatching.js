@@ -60,7 +60,9 @@ else
     for (let i = 0; i < trackAreas.length; i++)
     {
         trackAreas[i].addEventListener(`click`, (e) => {
-            if (currentSelection != ``)
+            tracksinAlbumArea = trackAreas[i].querySelectorAll(`.matching-track`);
+            console.log(tracksinAlbumArea);
+            if (currentSelection != `` && tracksinAlbumArea.length < 5)
             {
                 trackAreas[i].appendChild(currentSelection);
                 if (i == 0)
