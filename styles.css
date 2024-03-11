@@ -177,8 +177,8 @@ h3 {
 }
 
 #guess-album-img {
-    height: 200px;
-    width: 200px;
+    height: 30vh;
+    width: 30vh;
     background-color: #226662;
     display: flex;
     align-self: center;
@@ -186,25 +186,26 @@ h3 {
 
 #lyrics {
     color:#662D22;
-    font-size: 36px;
+    font-size: 2.5rem;
     align-self: center;
     margin: 12px;
 }
 
 #guess-inp {
-    width: 200px;
-    height: 25px;
+    width: 30vh;
+    height: 7vh;
+    font-size: 2rem;
     align-self: center;
     text-align: center;
 }
 
 #guess-submit-btn {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin: 12px;
-    font-size: 18px;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    margin: 1rem;
+    font-size: 2rem;
     align-self: center;
     color: #662D22;
     background-color: #DAD6D5;
@@ -582,7 +583,7 @@ h3 {
 
 #album-history-content {
     display: flex;
-    height: 90%;
+    height: auto;
     background-image: url('images/pattern.svg');
     background-repeat: repeat;
     background-size: 33.3%;
